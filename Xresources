@@ -1,0 +1,36 @@
+!Colors
+!*font: -schumacher-clean-*-*-*-*-14-*-*-*-*-*-*-*
+*background: #696969
+*foreground: #fffef6
+*color0: #363636
+*color8: #424242
+*color1: #C37561
+*color9:  #D19485
+*color2: #A0A57E
+*color10: #7f8264
+*color3: #b58b62
+*color11: #DEBC9C
+*color4: #1d2b41
+*color12: #98A1B9
+*color5: #AB716D
+*color13: #b4d2c8
+*color6: #98B9B1
+*color14: #769293
+*color7: #9ba0a7
+*color15: #6e7383
+
+XTerm*background: #696969
+XTerm*foreground: #fffef6
+XTerm*pointerColor: #363636
+XTerm*pointerColorBackground: #C37561
+XTerm*cursorColor: #A0A57E
+XTerm*internalBorder: 3
+XTerm*loginShell: true
+XTerm*scrollBar: false
+XTerm*scrollKey: true
+XTerm*saveLines: 1000
+XTerm*multiClickTime: 250 
+XTerm*on2Clicks:  regex [^/@ \n]+
+XTerm*on3Clicks:  regex [^ \n]+
+XTerm*on4Clicks:  regex [^#$]+
+XTerm*on5Clicks:  line
