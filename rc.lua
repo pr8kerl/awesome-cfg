@@ -415,7 +415,7 @@ awful.rules.rules = {
     { rule = { class = "Google-chrome" },
       properties = { tag = tags[1][2] } },
     -- Set virt-manager to always map on tags number 3 of screen 1.
-    { rule = { class = "Firefox" },
+    { rule = { class = "Virt-manager" },
       properties = { tag = tags[1][3] } },
     -- Set Firefox to always map on tags number 4 of screen 1.
     { rule = { class = "Firefox" },
