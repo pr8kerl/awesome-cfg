@@ -113,15 +113,13 @@ end
 myawesomemenu = {
    { "chrome", "google-chrome" },
    { "firefox", "firefox" },
-   { "pidgin", "pidgin" },
-   { "virt-manager", "virt-manager" },
-   { "lock", "xscreensaver-command -lock" },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", awesome.quit }
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
+                                    { "resolution", "/home/ians/.config/awesome/setResolution.sh" },
                                     { "open terminal", terminal }
                                   }
                         })
@@ -259,8 +257,6 @@ root.buttons(awful.util.table.join(
 ))
 -- }}}
 
-
-
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
@@ -278,8 +274,6 @@ globalkeys = awful.util.table.join(
             if client.focus then client.focus:raise() end
         end),
     awful.key({ modkey,           }, "w", function () mymainmenu:show({keygrabber=true}) end),
-    awful.key({ modkey            }, "Print",
-          function () awful.util.spawn_with_shell("DATE=`date +%d%m%Y_%H%M%S`; xsnap -nogui -file $HOME/Pictures/xsnap$DATE") end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
@@ -414,12 +408,9 @@ awful.rules.rules = {
     -- Set Chrome to always map on tags number 2 of screen 1.
     { rule = { class = "Google-chrome" },
       properties = { tag = tags[1][2] } },
-    -- Set virt-manager to always map on tags number 3 of screen 1.
-    { rule = { class = "Virt-manager" },
-      properties = { tag = tags[1][3] } },
-    -- Set Firefox to always map on tags number 4 of screen 1.
+    -- Set Firefox to always map on tags number 3 of screen 1.
     { rule = { class = "Firefox" },
-      properties = { tag = tags[1][4] } },
+      properties = { tag = tags[1][3] } },
 }
 -- }}}
 
